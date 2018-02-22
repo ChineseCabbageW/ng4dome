@@ -1,11 +1,15 @@
-
 <h1>{{title}}</h1>
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes"
-      [class.selected]="hero === selectedHero"
-      (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-</ul>
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<a routerLink="/heroes">Heroes</a>
+<router-outlet></router-outlet>
+<!---->
+<br>
+<hr>
+<h3 >2、通过输入型绑定把数据从父组件传到子组件</h3>
+<div style="background-color: bisque">
+  <version-parent></version-parent>
+</div>
+
+<br>
+<hr>
+<h3>3、父组件监听子组件的事件</h3>
+<vote-taker></vote-taker>
